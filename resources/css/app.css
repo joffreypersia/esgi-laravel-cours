@@ -40,3 +40,9 @@
 @utility card {
   @apply bg-white rounded-lg shadow-md p-6;
 }
+
+@layer base {
+    a {
+        color: var(--color-primary-500);
+    }
+}
