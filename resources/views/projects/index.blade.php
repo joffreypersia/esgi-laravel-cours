@@ -1,5 +1,8 @@
 <x-layout>
-    <h1>Bienvenue sur la page Projects</h1>
+    <div class="flex justify-between gap-4">
+        <h1>Bienvenue sur la page Projects</h1>
+        <flux:button :href="route('projects.create')">Créer un nouveau projet</flux:button>
+    </div>
 
     @if(session()->has('success'))
     <flux:callout icon="check-circle" variant="success">
