@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 @source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../vendor/livewire/flux/dist/**/*.blade.php';
 @source '../../storage/framework/views/*.php';
 @source '../**/*.blade.php';
 @source '../**/*.js';
@@ -14,7 +15,7 @@
     h1 {
         @apply text-3xl font-bold
     }
-
+    
     h2 {
         @apply text-2xl font-bold
     }
@@ -22,10 +23,10 @@
 
 @layer components {
     .btn {
-        @apply px-2 py-1 rounded bg-slate-100
+        @apply px-2 py-1 rounded bg-slate-100 text-slate-900 dark:bg-zinc-700 dark:text-zinc-100 cursor-pointer
     }
 
     .btn-primary {
-        @apply bg-blue-600 text-blue-50
+        @apply bg-blue-600 text-white hover:bg-blue-700 dark:bg-blue-600 dark:hover:bg-blue-500
     }
 }

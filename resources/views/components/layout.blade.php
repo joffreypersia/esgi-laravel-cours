@@ -7,11 +7,11 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     @fluxAppearance
 </head>
-<body class="bg-gray-50 min-h-screen flex flex-col">
-    <header class="bg-white shadow">
+<body class="min-h-screen flex flex-col bg-gray-50 dark:bg-zinc-900 dark:text-zinc-50">
+    <header class="bg-white shadow dark:bg-zinc-800 dark:border-b dark:border-zinc-700">
         <nav class="container mx-auto px-4 py-4">
             <div class="flex items-center justify-between">
-                <h1 class="text-xl font-bold text-gray-800">Cours ESGI - Laravel</h1>
+                <h1 class="text-xl font-bold text-gray-800 dark:text-white">Cours ESGI - Laravel</h1>
                 <ul class="flex space-x-6">
                     <x-nav-link :href="route('home')" :active="Route::is('home')">
                         Accueil
@@ -34,8 +34,8 @@
         {{ $slot }}
     </main>
 
-    <footer class="bg-gray-800 text-white mt-auto">
-        <div class="container mx-auto px-4 py-6 text-center">
+    <footer class="bg-gray-800 text-white mt-auto py-6">
+        <div class="container mx-auto px-4 text-center">
             <p>&copy; {{ date('Y') }} - Cours ESGI Laravel</p>
         </div>
     </footer>
