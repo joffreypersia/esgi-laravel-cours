@@ -4,6 +4,7 @@ use App\Http\Controllers\ProjectController;
 use App\Models\Project;
 use Illuminate\Support\Arr;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TaskController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,3 +23,5 @@ Route::resource('projects', ProjectController::class);
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
+Route::patch('/tasks/{task}/toggle', [TaskController::class, 'toggle'])->name('tasks.toggle');
